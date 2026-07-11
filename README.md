@@ -1,32 +1,36 @@
 # 🎬 IMDB Movie Review Sentiment Analysis
 
-A Natural Language Processing (NLP) project that classifies IMDB movie reviews as **Positive** or **Negative** using Machine Learning.
+A Natural Language Processing (NLP) project that classifies IMDB movie reviews into **Positive** and **Negative** sentiment using Machine Learning algorithms.
 
 ---
 
 ## 📌 Overview
 
-This project demonstrates a complete NLP pipeline including:
+This project implements an end-to-end NLP workflow for sentiment classification.
 
-- Text Cleaning
-- Stopword Removal
-- Lemmatization
-- Feature Extraction (CountVectorizer & TF-IDF)
-- Model Training
-- Model Evaluation
-- Model Serialization using Pickle
+The pipeline includes:
 
-The dataset contains **50,000 IMDB movie reviews** labeled as either positive or negative.
+- Text preprocessing
+- Data cleaning
+- Train-test splitting
+- Feature extraction using CountVectorizer and TF-IDF
+- Machine Learning model training
+- Model evaluation
+- Model serialization using Pickle
+
+The dataset contains **50,000 IMDB movie reviews** with binary sentiment labels.
 
 ---
 
 ## 🚀 Features
 
-- Clean and preprocess movie reviews
-- Convert text into numerical features
-- Train multiple Machine Learning models
+- Clean raw movie review text
+- Remove stopwords and unnecessary characters
+- Apply lemmatization
+- Convert text data into numerical vectors
+- Train multiple ML models
 - Compare model performance
-- Save the trained model for future predictions
+- Save trained model and vectorizer for future predictions
 
 ---
 
@@ -44,86 +48,111 @@ The dataset contains **50,000 IMDB movie reviews** labeled as either positive or
 
 **Dataset:** IMDB Movie Reviews Dataset
 
-- 50,000 reviews
-- Binary Sentiment Classification
-- Labels:
-  - Positive
-  - Negative
+Details:
+
+- Total Reviews: **50,000**
+- Classes:
+  - ✅ Positive
+  - ❌ Negative
 
 ---
 
-## 📋 Data Preprocessing
+# 🔄 NLP Pipeline
 
-The following preprocessing steps were performed:
+## 1. Text Preprocessing
+
+The following preprocessing steps were applied:
 
 - Convert text to lowercase
 - Remove unnecessary prefixes
 - Remove punctuation
-- Tokenization
-- Stopword removal
+- Remove stopwords
 - Lemmatization
 
----
+Example:
 
-## 🔤 Feature Extraction
+```
+Original:
+"This movie was amazing!"
 
-Two text vectorization techniques were used:
-
-### CountVectorizer
-
-Converts text into a Bag-of-Words representation.
-
-### TF-IDF Vectorizer
-
-Assigns weights to words based on their importance in the document.
+Processed:
+"movie amazing"
+```
 
 ---
 
-## 🤖 Machine Learning Models
+# 🔤 Feature Extraction
+
+Two vectorization techniques were used:
+
+## CountVectorizer
+
+Converts text into a Bag-of-Words numerical representation.
+
+## TF-IDF Vectorizer
+
+Assigns importance weights to words based on their frequency and uniqueness.
+
+TF-IDF was selected as the better performing feature extraction method.
+
+---
+
+# 🤖 Machine Learning Models
 
 The following models were trained:
 
-- Logistic Regression
-- Multinomial Naive Bayes
+### 1. Logistic Regression
 
-Each model was evaluated using:
+- CountVectorizer Features
+- TF-IDF Features
 
-- CountVectorizer
-- TF-IDF Vectorizer
+
+### 2. Multinomial Naive Bayes
+
+- CountVectorizer Features
+- TF-IDF Features
 
 ---
 
-## 📊 Results
+# 📊 Model Performance
 
 | Model | Feature Extraction | Accuracy |
 |--------|-------------------|----------|
-| Logistic Regression | CountVectorizer | **86.10%** |
+| Logistic Regression | CountVectorizer | 86.10% |
 | Logistic Regression | TF-IDF | **87.26%** |
-| Multinomial Naive Bayes | CountVectorizer | **86.10%** |
+| Multinomial Naive Bayes | CountVectorizer | 86.10% |
 | Multinomial Naive Bayes | TF-IDF | **87.26%** |
-
-### Best Performing Model
-
-✅ Logistic Regression + TF-IDF
-
-Accuracy: **87.26%**
 
 ---
 
-## 💾 Saved Files
+# 🏆 Best Model
 
-The trained model and vectorizer are saved using Pickle.
+**Logistic Regression + TF-IDF**
+
+Accuracy:
+
+```
+87.26%
+```
+
+This model was selected and saved for future predictions.
+
+---
+
+# 💾 Saved Model Files
+
+The trained model and TF-IDF vectorizer are saved using Pickle.
 
 ```
 model.pkl
-countvec.pkl
+tfidf.pkl
 ```
 
-These files can be loaded later to predict sentiment for new movie reviews.
+These files can be loaded to classify new movie reviews without retraining the model.
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```
 IMDB-Sentiment-Analysis/
@@ -131,28 +160,28 @@ IMDB-Sentiment-Analysis/
 ├── IMDB Dataset.csv
 ├── sentiment_analysis.ipynb
 ├── model.pkl
-├── countvec.pkl
+├── tfidf.pkl
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-## ▶️ Installation
+# ▶️ Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/IMDB-Sentiment-Analysis.git
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the notebook
+Run Jupyter Notebook:
 
 ```bash
 jupyter notebook
@@ -160,18 +189,23 @@ jupyter notebook
 
 ---
 
-## 📌 Future Improvements
+# 🔮 Future Improvements
 
-- Use GridSearchCV for hyperparameter tuning
-- Train Support Vector Machine (SVM)
-- Train Random Forest Classifier
-- Implement Deep Learning (LSTM/BERT)
-- Deploy using Flask or FastAPI
-- Build a Streamlit Web Application
+- Hyperparameter tuning using GridSearchCV
+- Add Support Vector Machine (SVM)
+- Experiment with Random Forest
+- Implement Deep Learning models:
+  - LSTM
+  - BERT
+- Deploy model using:
+  - Flask
+  - FastAPI
+  - Streamlit
+- Create a real-time sentiment prediction web application
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Mahadi ur Rehman Siddiqui**
 
@@ -179,4 +213,4 @@ BSBIT Student | AI & Machine Learning Enthusiast | NLP Learner
 
 ---
 
-⭐ If you found this project helpful, consider giving it a star!
+⭐ If you found this project useful, consider giving it a star!
