@@ -1,7 +1,4 @@
 <div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=Sentiment%20Analysis%20AI&fontSize=48&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Emotion%20Classification%20using%20NLP%20%26%20Machine%20Learning&descAlignY=58&descAlign=50" width="100%"/>
-
 # 🧠 Sentiment Analysis AI
 
 ### AI-Powered Emotion Detection System using NLP & Machine Learning
