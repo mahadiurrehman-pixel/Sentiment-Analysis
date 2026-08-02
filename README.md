@@ -4,164 +4,163 @@
 
 # 🧠 Sentiment Analysis AI
 
-### Emotion Detection System using TF-IDF + Linear SVM
+### AI-Powered Emotion Detection System using NLP & Machine Learning
 
 <p>
 
 <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
-<img src="https://img.shields.io/badge/Scikit--learn-ML-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
+<img src="https://img.shields.io/badge/Scikit--learn-Machine%20Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
 <img src="https://img.shields.io/badge/NLP-TF--IDF-blue?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Model-Linear%20SVM-purple?style=for-the-badge"/>
 
 </p>
 
-</div>
+### 🚀 Live Demo
 
+<a href="https://sentiment-analysis-mahadi.streamlit.app/">
+<img src="https://img.shields.io/badge/Launch%20App-Streamlit-red?style=for-the-badge&logo=streamlit"/>
+</a>
+
+</div>
 
 ---
 
 # 📌 About The Project
 
-**Sentiment Analysis AI** is an NLP-based machine learning application that detects the emotional tone of text.
+**Sentiment Analysis AI** is an NLP-based Machine Learning application that analyzes human-written text and predicts the underlying emotion.
 
-The system uses:
+The system uses a complete machine learning pipeline:
 
-- **TF-IDF Vectorization** for text feature extraction
-- **Linear Support Vector Machine (LinearSVC)** for classification
-- **Label Encoder** for emotion mapping
-- **Streamlit** for an interactive AI dashboard
+* 📝 Text preprocessing
+* 🔢 TF-IDF feature extraction
+* 🧠 Linear Support Vector Machine classifier
+* 🏷️ Label encoding
+* 🌐 Streamlit interactive dashboard
 
-
-The application can analyze user-written text and classify it into different human emotions in real-time.
+The application can classify text into multiple emotional categories in real-time.
 
 ---
 
 # ✨ Features
 
-## 🤖 Machine Learning
+## 🤖 Machine Learning Features
 
-✅ Text preprocessing pipeline  
-✅ TF-IDF feature extraction  
-✅ Linear SVM classifier  
-✅ Multi-class emotion prediction  
-✅ Saved ML pipeline using Joblib  
-✅ Fast inference  
+✅ Natural Language Processing pipeline
+✅ TF-IDF based text representation
+✅ Linear SVM multi-class classifier
+✅ Emotion prediction from raw text
+✅ Saved ML pipeline using Joblib
+✅ Fast real-time inference
 
+---
 
-## 🎨 Streamlit Dashboard
+## 🎨 Application Features
 
-✅ Modern AI-style interface  
-✅ Text input prediction  
-✅ Emotion result display  
-✅ Emotion-based UI elements  
-✅ Easy deployment ready  
-
+✅ Modern Streamlit AI dashboard
+✅ Interactive text prediction
+✅ Emotion-based results
+✅ Simple user interface
+✅ Cloud deployment ready
 
 ---
 
 # 🎭 Supported Emotions
 
-| Emotion | Emoji |
-|---|---|
-| Joy | 😊 |
-| Sadness | 😢 |
-| Anger | 😡 |
-| Love | ❤️ |
-| Fear | 😨 |
-| Surprise | 😲 |
-
-
----
-
-# 🏗️ Machine Learning Pipeline
-
-
-```
-User Text
-
-     ↓
-
-Text Cleaning
-
-     ↓
-
-TF-IDF Vectorizer
-
-     ↓
-
-Linear SVM Classifier
-
-     ↓
-
-Label Encoder
-
-     ↓
-
-Predicted Emotion
-```
-
+| Emotion  | Emoji | Meaning                 |
+| -------- | ----- | ----------------------- |
+| Joy      | 😊    | Happiness, positivity   |
+| Sadness  | 😢    | Sorrow, loneliness      |
+| Anger    | 😡    | Frustration, irritation |
+| Love     | ❤️    | Affection, care         |
+| Fear     | 😨    | Anxiety, uncertainty    |
+| Surprise | 😲    | Unexpected events       |
 
 ---
 
-# 🧠 Model Details
+# 🏗️ Machine Learning Architecture
 
+```
+                User Text
+
+                    ↓
+
+            Text Preprocessing
+
+                    ↓
+
+             TF-IDF Vectorizer
+
+                    ↓
+
+            Linear SVM Classifier
+
+                    ↓
+
+              Label Encoder
+
+                    ↓
+
+          Predicted Emotion
+```
+
+---
+
+# 🧠 Model Information
 
 ## TF-IDF Vectorizer
 
-Used for converting text into numerical features.
+Converts text data into numerical features.
 
-Features:
+Configuration:
 
-- ngram_range = (1,2)
-- min_df = 2
-- max_df = 0.95
+```python
+ngram_range = (1,2)
+min_df = 2
+max_df = 0.95
+```
 
+---
 
 ## Linear SVM
 
-Linear Support Vector Machine is used because:
+Linear Support Vector Machine was selected because:
 
-- Works well with high-dimensional text data
-- Fast training
-- Good generalization
-- Effective for classification problems
-
+* Handles high-dimensional text data efficiently
+* Performs well on NLP classification tasks
+* Provides fast prediction
+* Generalizes well on unseen data
 
 ---
 
 # 📊 Dataset
 
-Dataset used:
+Dataset:
 
 **Kaggle Emotion Dataset for NLP**
 
-Dataset contains:
+Details:
 
-| Property | Value |
-|-|-|
-| Samples | 16,000 |
-| Task | Emotion Classification |
-| Language | English |
-| Classes | 6 |
-
+| Property | Value                  |
+| -------- | ---------------------- |
+| Samples  | 16,000                 |
+| Task     | Emotion Classification |
+| Language | English                |
+| Classes  | 6                      |
 
 Example:
 
-
 ```
-i didnt feel humiliated ; sadness
+I feel extremely happy today ; joy
 
-im feeling angry about this situation ; anger
+I am angry about this situation ; anger
 
-i love spending time with my family ; love
+I miss my family so much ; love
 ```
-
 
 ---
 
 # 📁 Project Structure
-
 
 ```
 Sentiment-Analysis/
@@ -169,132 +168,109 @@ Sentiment-Analysis/
 │
 
 ├── app.py
-
 ├── emotion_svm_model.pkl
-
 ├── label_encoder.pkl
-
 ├── requirements.txt
-
 ├── train_model.ipynb
-
 ├── data/
-
 │   └── train.txt
-
 │
-
 └── README.md
-
 ```
-
 
 ---
 
 # ⚙️ Installation
 
-
-### Clone Repository
+## Clone Repository
 
 ```bash
-git clone https://github.com/mahadi-ur-rehman-pixel/Sentiment-Analysis.git
+git clone https://github.com/mahadiurrehman-pixel/Sentiment-Analysis.git
 
 cd Sentiment-Analysis
 ```
 
+---
 
-### Create Environment
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-
 Activate:
 
-
-Windows:
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-
-Linux:
+### Linux / macOS
 
 ```bash
 source venv/bin/activate
 ```
 
+---
 
-Install dependencies:
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-
 ---
 
 # 🚀 Run Application
-
 
 ```bash
 streamlit run app.py
 ```
 
-
-Application will start at:
-
+Application:
 
 ```
 http://localhost:8501
 ```
 
-
 ---
 
-# 📦 Model Files
+# 📦 Saved Model Files
 
-
-### emotion_svm_model.pkl
+## emotion_svm_model.pkl
 
 Contains:
 
-- TF-IDF Vectorizer
-- Linear SVM Model
-
-
-### label_encoder.pkl
-
-Converts:
-
-```
-0 → anger
-
-1 → fear
-
-2 → joy
-
-3 → love
-
-4 → sadness
-
-5 → surprise
-```
-
+* TF-IDF Vectorizer
+* Trained Linear SVM model
 
 ---
 
-# 🧪 Example Prediction
+## label_encoder.pkl
 
+Maps numerical classes back to emotions.
 
-Input:
+Example:
 
 ```
-I just achieved my goal and I feel extremely happy.
+0 → anger
+1 → fear
+2 → joy
+3 → love
+4 → sadness
+5 → surprise
 ```
 
+---
+
+# 🧪 Example Predictions
+
+### Input
+
+```
+I achieved my dream and I feel extremely happy today.
+```
 
 Output:
 
@@ -302,15 +278,13 @@ Output:
 Emotion: Joy 😊
 ```
 
-
 ---
 
-Input:
+### Input
 
 ```
-I feel lonely and everything seems difficult today.
+I feel lonely and everything is difficult today.
 ```
-
 
 Output:
 
@@ -318,63 +292,67 @@ Output:
 Emotion: Sadness 😢
 ```
 
-
 ---
 
 # 🛠️ Tech Stack
 
-
-| Technology | Purpose |
-|-|-|
-| Python | Programming Language |
-| Pandas | Data Processing |
-| NumPy | Numerical Operations |
-| Scikit-learn | Machine Learning |
-| TF-IDF | NLP Feature Extraction |
-| LinearSVC | Classification |
-| Joblib | Model Serialization |
-| Streamlit | Web Application |
-
+| Technology   | Purpose                 |
+| ------------ | ----------------------- |
+| Python       | Core Programming        |
+| Pandas       | Data Processing         |
+| NumPy        | Numerical Computing     |
+| Scikit-learn | Machine Learning        |
+| TF-IDF       | Text Feature Extraction |
+| LinearSVC    | Classification          |
+| Joblib       | Model Saving            |
+| Streamlit    | Web Application         |
 
 ---
 
 # 🔮 Future Improvements
 
+🚀 Upgrade to Transformer models:
 
-- Transformer based model (BERT)
-- REST API using FastAPI
-- Docker deployment
-- Multi-language emotion detection
-- Real-time social media analysis
-- Cloud deployment
+* BERT
+* RoBERTa
+* DistilBERT
 
+Additional features:
+
+* REST API with FastAPI
+* Docker deployment
+* Multi-language emotion detection
+* Real-time social media analysis
+* Cloud-based ML service
+
+---
+
+# 🌐 Live Application
+
+Try the deployed application:
+
+🔗 https://sentiment-analysis-mahadi.streamlit.app/
 
 ---
 
 # 👨‍💻 Developer
 
-
 <div align="center">
-
 
 ## Mahadi Ur Rehman Siddiqui
 
-
-AI / Machine Learning Engineer  
+AI / Machine Learning Engineer
 Python Developer | NLP Enthusiast
 
-
-Building intelligent systems with Machine Learning and Artificial Intelligence.
-
+Building intelligent systems using Artificial Intelligence and Machine Learning.
 
 </div>
-
 
 ---
 
 <div align="center">
 
-⭐ If you like this project, consider giving it a star!
+⭐ If you found this project useful, consider giving it a star!
 
 Made with ❤️ by **Mahadi Ur Rehman Siddiqui**
 
